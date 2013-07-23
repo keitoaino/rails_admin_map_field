@@ -1,4 +1,13 @@
-#map style='height: 300px;'
+= form.send :text_field, field.address_field, id: field.address_dom_name
+#map
+= form.send :text_field, field.lat_field, id: field.lat_dom_name
+= form.send :text_field, field.lng_field, id: field.lng_dom_name
+
+javascript:
+  window.address = "#{field.address_dom_name}";
+  window.lat = "#{field.lat_dom_name}";
+  window.lng = "#{field.lng_dom_name}";
 
 = javascript_include_tag 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false'
 = javascript_include_tag 'map'
+= stylesheet_link_tag 'map'
