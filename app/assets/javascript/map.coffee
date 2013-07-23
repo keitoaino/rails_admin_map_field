@@ -4,6 +4,6 @@ mapOptions = {
   mapTypeId: google.maps.MapTypeId.ROADMAP
 }
 
-$scope.map = new google.maps.Map document.getElementById('map'), mapOptions
+map = new google.maps.Map document.getElementById('map'), mapOptions
 
-google.maps.event.addListener $scope.map, 'click', (event) ->
+google.maps.event.addListener map, 'click', (event) ->
