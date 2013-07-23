@@ -5,6 +5,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency('rspec-rails', '>= 2.4')
   s.add_development_dependency('yard', '>= 0.6')
   s.add_development_dependency('sqlite3')
+  s.add_development_dependency('gmaps4rails')
 
   # If you add a runtime dependency, please maintain alphabetical order
   s.add_runtime_dependency('rails', '>= 3.0.0')
@@ -16,9 +17,9 @@ Gem::Specification.new do |s|
   s.name              = "rails_admin_map_field"
   s.version           = "0.0.1"
   s.platform          = Gem::Platform::RUBY
-  s.authors           = ["Jason Langenauer"]
-  s.email             = ["jason@jasonlangenauer.com"]
-  s.homepage          = "http://github.com/jasonl/"
+  s.authors           = ["Keito Aino"]
+  s.email             = ["keitoaino@gmail.com"]
+  s.homepage          = "http://github.com/keitoaino/"
   s.summary           = "Adds a map field using the Google Maps API to rails_admin"
   s.description       = "A map field for RailsAdmin that can be used to manipulate a latitude/longitude field pair"
   s.rubyforge_project = s.name
