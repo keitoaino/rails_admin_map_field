@@ -1,7 +1,7 @@
 = form.send :text_field, field.address_field, id: field.address_dom_name
 #map
-= form.send :hidden, field.lat_field, id: field.lat_dom_name
-= form.send :hidden, field.lng_field, id: field.lng_dom_name
+= form.send :hidden_field, field.lat_field, id: field.lat_dom_name
+= form.send :hidden_field, field.lng_field, id: field.lng_dom_name
 
 javascript:
   window.address = "#{field.address_dom_name}";
