@@ -11,6 +11,12 @@ Usage
 rails_admin_map_field expects that the model will have two attributes, one for latitude and one for longitude of the point represented. To enable rails_admin_map_field, add the following to your `Gemfile`:
 
 ```ruby
+gem 'rails_admin_map_field'
+```
+
+or directly from Github repo:
+
+```ruby
 gem 'rails_admin_map_field', git: 'git://github.com/keitoaino/rails_admin_map_field.git'
 ```
 
@@ -20,56 +26,20 @@ Then, add in your `config/initializers/rails_admin.rb` initializer:
 RailsAdmin.config do |config|
   config.model User do
     edit do
-      field :latitude, :map
+      field :address, :map
     end
   end
 end
 ```
 
-**Note**: The field which is set as a map-type field must be the latitude field, not the longitude. By default, rails_admin_map_field will guess that the longitude field is called "longitude".
-
-Configuration
-=============
-
-For different configurations, rails_admin_map_field can be configured with the following:
-
-- `longitude_field` - the name of the longitude field that forms the the co-ordinate with the latitude field specified. Defaults to "longitude"
-- `google_api_key` - if you use a Google Maps API Key, it can be specified here.
-- `default_latitude` - the latitude to center the map shown on if the latitude field is blank. Defaults to 51.5, the latitude of London, UK.
-- `default_longitude` - the longitude used if the longitude field is blank. Defaults to -0.126, the longitude of London, UK.
-
-A more complicated configuration example:
-
-```ruby
-RailsAdmin.config do |config|
-  config.model Point do
-    edit do
-      field :lat, :map do
-        longitude_field :lon
-        google_api_key "a1b2c3d4e5f6deadbeef"
-        default_latitude -34.0  # Sydney, Australia
-        default_longitude 151.0
-      end
-    end
-  end
-end
-```
+**Note**: The field which is set as a map-type field must be the address field.
 
 LICENSE
 =======
-rails_admin_map_field is licensed under the MIT license.
+rails_admin_map_field is licensed under the GPLv3 license.
 
 Copyright (C) 2011 by Jason Langenauer
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+Copyright (C) 2013 by Keito Aino
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
