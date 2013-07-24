@@ -36,7 +36,7 @@ end
 
 LICENSE
 =======
-rails_admin_map_field is licensed under the GPLv3 license.
+rails_admin_map_field is licensed under the GPLv2 license.
 
 Copyright (C) 2011 by Jason Langenauer
 
