@@ -39,6 +39,7 @@ LICENSE
 rails_admin_map_field is licensed under the GPLv3 license.
 
 Copyright (C) 2011 by Jason Langenauer
+
 Copyright (C) 2013 by Keito Aino
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
