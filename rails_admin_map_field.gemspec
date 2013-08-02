@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
 
 
   s.name              = "rails_admin_map_field"
-  s.version           = "0.0.3"
+  s.version           = "0.0.5"
   s.platform          = Gem::Platform::RUBY
   s.authors           = ["Keito Aino"]
   s.email             = ["keitoaino@gmail.com"]

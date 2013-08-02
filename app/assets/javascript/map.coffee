@@ -2,16 +2,16 @@ address = document.getElementById window.address
 lat = document.getElementById window.lat
 lng = document.getElementById window.lng
 
-geocoder = new google.maps.Geocoder()
 marker = null
-
-mapOptions = {
-  zoom: 8,
-  mapTypeId: google.maps.MapTypeId.ROADMAP
-}
 
 window.onload = ->
   map_element = document.getElementById 'map'
+
+  mapOptions = {
+    zoom: 8,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  }
+  geocoder = new google.maps.Geocoder()
   map = new google.maps.Map map_element, mapOptions
 
   google.maps.event.addListener map, 'click', (event) ->
